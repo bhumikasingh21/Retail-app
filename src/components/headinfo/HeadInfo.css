@@ -1,0 +1,32 @@
+.info-container{
+    height: 30px;
+    background-color: #304a6a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 10px 20px;
+    
+
+}
+
+.info-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+
+.info-left1{
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 25px;
+    font-size: 17px;
+}
+
+.info-right1{
+    font-size: 17px;
+    cursor: pointer;
+}

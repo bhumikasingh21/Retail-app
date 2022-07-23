@@ -1,0 +1,67 @@
+.nav-container{
+    height: 60px;
+    
+}
+
+.wrapper{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.left{
+    flex: 1;     
+        
+    
+}
+
+.logo{
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.center{
+    flex: 1;         /*1 unit flex means it will be assigned 1 unit part */
+    display: flex; 
+    align-items: center ; 
+}
+
+
+.center span{
+    cursor: pointer;
+
+}
+
+
+.search-container{
+    border: 0.5px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 5px;
+}
+
+.search-container input{
+    border: none;
+    outline: none;
+}
+
+
+.right{
+    flex: 1;    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    
+}
+
+.menu-item{
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+
+
+

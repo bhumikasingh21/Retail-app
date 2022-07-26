@@ -1,6 +1,6 @@
 .nav-container{
     height: 60px;
-    
+
 }
 
 .wrapper{
@@ -12,8 +12,8 @@
 
 .left{
     flex: 1;     
-        
-    
+
+
 }
 
 .logo{
@@ -54,14 +54,26 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;    
-    
+
 }
 
 .menu-item{
     cursor: pointer;
     margin-left: 25px;
+    display : flex;
+    align-items : center;
 }
 
+.menu-item .badge{
+    position : absolute;
+    top : 45px;
+    right : 30px;
+}
 
-
-
+.badge p {
+    background-color : #304a6a;
+    padding : 2px 5px;
+    border-radius : 50%;
+    color : #ffffff !important;
+    font-size : 20px;
+}

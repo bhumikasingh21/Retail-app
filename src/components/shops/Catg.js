@@ -1,6 +1,9 @@
 import React from "react"
 
 const Catg = () => {
+
+  const [show, setShow] = React.useState(false);
+
   const data = [
     {
       cateImg: "./images/category/cat-1.png",
@@ -8,7 +11,7 @@ const Catg = () => {
     },
     {
       cateImg: "./images/category/cat-2.png",
-      cateName: "Samasung",
+      cateName: "Samsung",
     },
     {
       cateImg: "./images/category/cat-1.png",
@@ -20,24 +23,59 @@ const Catg = () => {
     },
     {
       cateImg: "./images/category/cat-1.png",
-      cateName: "Redimi",
+      cateName: "Redmi",
     },
     {
       cateImg: "./images/category/cat-2.png",
       cateName: "Sony",
     },
   ]
+
+  const shops = [
+    {
+      cateImg: "./images/category/cat-1.png",
+      cateName: "Apple Store",
+    },
+    {
+      cateImg: "./images/category/cat-2.png",
+      cateName: "Samsung Store",
+    },
+    {
+      cateImg: "./images/category/cat-1.png",
+      cateName: "Oppo Store",
+    },
+    {
+      cateImg: "./images/category/cat-2.png",
+      cateName: "Vivo Store",
+    },
+    {
+      cateImg: "./images/category/cat-1.png",
+      cateName: "Redmi Store",
+    },
+    {
+      cateImg: "./images/category/cat-2.png",
+      cateName: "Sony Store",
+    },
+  ]
   return (
     <>
       <div className='category'>
         <div className='chead d_flex'>
-          <h1>Brands </h1>
-          <h1>Shops </h1>
+          <h1 style={{cursor : "pointer"}} onClick={() => setShow(false)}>Brands </h1>
+          <h1 style={{cursor : "pointer"}} onClick={() => setShow(true)}>Shops </h1>
         </div>
-        {data.map((value, index) => {
+        {!show && data.map((value, index) => {
           return (
             <div className='box f_flex' key={index}>
               <img src={value.cateImg} alt='' />
+              <span>{value.cateName}</span>
+            </div>
+          )
+        })}
+        {show && shops.map((value, index) => {
+          return (
+            <div className='box f_flex' key={index}>
+              {/* <img src={value.cateImg} alt='' /> */}
               <span>{value.cateName}</span>
             </div>
           )

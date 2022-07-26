@@ -1,7 +1,9 @@
-import React, { useState } from "react"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useSelector, useDispatch } from "react-redux";
+import {addToCart} from "../../redux/cart/cartAction";
 
 const SampleNextArrow = (props) => {
   const { onClick } = props
@@ -23,8 +25,16 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
+
 const FlashCard = ({ Data }) => {
   const [count, setCount] = useState(0)
+
+  const state = useSelector((state) => state.cartReducer.cartData);
+
+  console.log("This is state", state);
+
+  const dispatch = useDispatch();
+
   const increment = () => {
     setCount(count + 1)
   }
@@ -36,6 +46,12 @@ const FlashCard = ({ Data }) => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+  }
+
+  const addCartData = (items) => {
+    console.log("Add To Cart", items);
+    dispatch(addToCart({items}));
+    console.log("This is state", state);
   }
 
   return (
@@ -63,12 +79,16 @@ const FlashCard = ({ Data }) => {
                   <span className='material-icons' style={{color:"gray",fontSize:20}}>star_rate</span>
                   </div>
                   <div className='price'>
-                    <h4>${productItems.price}.00 </h4>
+                    <h4>₹{productItems.price}.00 </h4>
                     {/* step : 3  
                      if hami le button ma click garryo bahne 
                     */}
                     {/* <button onClick={() => addToCart(productItems)}>
                       <i className='fa fa-plus'></i>
+                    </button> */}
+                    <span className="material-icons" style={{cursor : "pointer"}} onClick={() => addCartData(productItems)}>add</span>
+                    {/* <button>
+
                     </button> */}
                   </div>
                 </div>

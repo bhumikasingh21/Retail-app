@@ -1,10 +1,11 @@
 .form-container{
-    height: 900px;
+    height: auto;
     width: 90%;
     border: 1px solid gray;
-    background-color: rgb(236, 227, 227);
+    background-color:#f6f9fc;
     display: flex;
     margin: 10px;
+    margin-top: -20px;
     padding: 10px 20px;
     border-radius: 10px;
 }
@@ -65,5 +66,42 @@
 .details input{
     
     height: 30px;
-    padding: 10px;
+    padding: 15px 10px;
 }
+
+select{
+    height: 30px;
+}
+
+.details-check{
+    display: flex;
+    gap: 10px;
+}
+
+.details-input-check{
+    border: none;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.details p{
+    margin-top: 10px;
+}
+
+.details-address{
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 2px;
+    justify-content: flex-end;
+    margin: 5px;
+    padding: 2px 2px;
+    background-color: rgb(174, 216, 216);
+    color: rgb(11, 11, 11);
+}
+
+#State{
+    width:250px;
+}
+
+

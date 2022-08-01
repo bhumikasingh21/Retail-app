@@ -10,11 +10,11 @@
     align-items: center ;
 }
 
-.left{
+/* .left{
     flex: 1;     
 
 
-}
+} */
 
 .logo{
     font-weight: bolder;
@@ -22,7 +22,7 @@
 }
 
 .center{
-    flex: 1;         /*1 unit flex means it will be assigned 1 unit part */
+    /* flex: 1;         1 unit flex means it will be assigned 1 unit part */
     display: flex; 
     align-items: center ; 
 }
@@ -50,7 +50,7 @@
 
 
 .right{
-    flex: 1;    
+    /* flex: 1;     */
     display: flex;
     align-items: center;
     justify-content: flex-end;    
@@ -66,8 +66,8 @@
 
 .menu-item .badge{
     position : absolute;
-    top : 45px;
-    right : 30px;
+    top : 20px;
+    right : 15px;
 }
 
 .badge p {

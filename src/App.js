@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Resgistration from "./components/Registration/Resgistration";
 // import SignIn from "./components/SignIn/SignIn";
 import CartItems from "./components/CartItems/CartItems";
+import Form from "./components/form/Form";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
 {/*           <Route path="/register" element={<Resgistration />} />
           <Route path="/signin" element={<SignIn />} /> */}
           <Route path="/cart" element={<CartItems />} />
+
+          <Route path="/checkout" element={<Form />} />
+           
         </Routes>
       </BrowserRouter>
     </Provider>

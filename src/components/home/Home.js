@@ -2,7 +2,6 @@ import React from 'react'
 import './Home.css'
 import HeadInfo from '../headinfo/HeadInfo'
 import Navbar from '../navbar/Navbar'
-import Slider from '../slider/Slider'
 import FlashDeals from '../flashDeals/FlashDeals'
 import TopCate from '../top/TopCate'
 import NewArrivals from '../newarrivals/NewArrivals'
@@ -23,7 +22,8 @@ const Home = () => {
         <Navbar/>
         {/* <Slider/> */}
         <SliderEffect/>
-        <FlashDeals/>
+       <div style={{marginTop:"25px"}}> <FlashDeals/>
+       </div>
         <TopCate/>
         <NewArrivals/>
         <Discount/>
@@ -31,7 +31,7 @@ const Home = () => {
         <Annocument/>
         <Wrapper/>
         <Footer/>
-        <Form/>
+        {/* <Form/> */}
     </div>
   )
 }
